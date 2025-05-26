@@ -8,7 +8,9 @@ const id=mongoose.ObjectId;
 const TodoSchema= Schema({
     title:String,
     description:String,
-    done:Boolean
+    done:{type:Boolean,
+        default:false
+    }
 })
 
 const TodoModel=mongoose.model("todos",TodoSchema)
